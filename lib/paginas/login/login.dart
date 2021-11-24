@@ -12,7 +12,7 @@ class _MyLoginState extends State<MyLogin> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: NetworkImage(
                 'https://blogger.googleusercontent.com/img/a/AVvXsEi9AOBpzpIlTrRMwU-38-ea_j-6cB5gTCYobF0BCJKFqVCVNurjJmGcMxHiIQoCYIJcumAG21-4bGeuSWGrawNFy-OXn38bTUwE4PstG2lXlYOdi1C352IM5a8sNH9R6Knm7Vv8UgMvzoBSB0LZ_KemLJgARiZJ_ox8U9JUt3Eh-tc5vh4nXcpdWFPj8g=s926'),
@@ -24,25 +24,25 @@ class _MyLoginState extends State<MyLogin> {
           children: [
             Container(),
             Container(
-              padding: EdgeInsets.only(left: 35, top: 130),
-              child: Text(
+              padding: const EdgeInsets.only(left: 35, top: 100),
+              child: const Text(
                 'Bienvenido a\nArtwork',
-                style: TextStyle(color: Colors.white, fontSize: 45),
+                style: TextStyle(color: Colors.white, fontSize: 35),
               ),
             ),
             SingleChildScrollView(
               child: Container(
                 padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.5),
+                    top: MediaQuery.of(context).size.height * 0.4),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(left: 35, right: 35),
+                      margin: const EdgeInsets.only(left: 35, right: 35),
                       child: Column(
                         children: [
                           TextField(
-                            style: TextStyle(color: Colors.black),
+                            style: const TextStyle(color: Colors.black),
                             decoration: InputDecoration(
                                 fillColor: Colors.grey.shade100,
                                 filled: true,
@@ -51,11 +51,11 @@ class _MyLoginState extends State<MyLogin> {
                                   borderRadius: BorderRadius.circular(10),
                                 )),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           TextField(
-                            style: TextStyle(),
+                            style: const TextStyle(),
                             obscureText: true,
                             decoration: InputDecoration(
                                 fillColor: Colors.grey.shade100,
@@ -65,13 +65,13 @@ class _MyLoginState extends State<MyLogin> {
                                   borderRadius: BorderRadius.circular(10),
                                 )),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text(
+                              const Text(
                                 'Entrar',
                                 style: TextStyle(
                                     fontSize: 27, fontWeight: FontWeight.w700),
@@ -82,13 +82,13 @@ class _MyLoginState extends State<MyLogin> {
                                 child: IconButton(
                                     color: Colors.white,
                                     onPressed: () => {},
-                                    icon: Icon(
+                                    icon: const Icon(
                                       Icons.arrow_forward,
                                     )),
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
                           Row(
@@ -99,10 +99,11 @@ class _MyLoginState extends State<MyLogin> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => MyRegister(),
+                                        builder: (context) =>
+                                            const MyRegister(),
                                       ));
                                 },
-                                child: Text(
+                                child: const Text(
                                   'Registrarse',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
@@ -110,11 +111,11 @@ class _MyLoginState extends State<MyLogin> {
                                       color: Color(0xff4c505b),
                                       fontSize: 18),
                                 ),
-                                style: ButtonStyle(),
+                                style: const ButtonStyle(),
                               ),
                               TextButton(
                                   onPressed: () {},
-                                  child: Text(
+                                  child: const Text(
                                     'Forgot Password',
                                     style: TextStyle(
                                       decoration: TextDecoration.underline,
