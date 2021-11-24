@@ -78,7 +78,7 @@ class _MyLoginState extends State<MyLogin> {
                               ),
                               CircleAvatar(
                                 radius: 30,
-                                backgroundColor: Color(0xff4c505b),
+                                backgroundColor: const Color(0xff4c505b),
                                 child: IconButton(
                                     color: Colors.white,
                                     onPressed: () => {},
