@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/paginas/login.dart';
+import 'package:flutter_application_2/paginas/login/login.dart';
 import 'package:flutter_application_2/main.dart';
 
 class MyRegister extends StatefulWidget {
@@ -15,7 +15,9 @@ class _MyRegisterState extends State<MyRegister> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: NetworkImage('https://blogger.googleusercontent.com/img/a/AVvXsEh1it7vgXz--wlg2fyvEV8K7S1a4kyi1CC6xOkRNV1-7A7MJ8snX2bFepRN-_POO4S4y-mQTq5qy7zpBAKuoSkTXc7GgoNCFOAl8xNCMM7Tbc6DZrsmVYcoPipVCq18nfFIdaZxA4MJR1cGgrUq7eGvlrd1cM4Lz1hOj_NeEbsy_jSSePJsRYvxnGISqA=s926'), fit: BoxFit.cover),
+            image: NetworkImage(
+                'https://blogger.googleusercontent.com/img/a/AVvXsEh1it7vgXz--wlg2fyvEV8K7S1a4kyi1CC6xOkRNV1-7A7MJ8snX2bFepRN-_POO4S4y-mQTq5qy7zpBAKuoSkTXc7GgoNCFOAl8xNCMM7Tbc6DZrsmVYcoPipVCq18nfFIdaZxA4MJR1cGgrUq7eGvlrd1cM4Lz1hOj_NeEbsy_jSSePJsRYvxnGISqA=s926'),
+            fit: BoxFit.cover),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -131,7 +133,7 @@ class _MyRegisterState extends State<MyRegister> {
                                 backgroundColor: Color(0xff4c505b),
                                 child: IconButton(
                                     color: Colors.white,
-                                    onPressed: ()=>{Navigator.pop(context)},
+                                    onPressed: () => {Navigator.pop(context)},
                                     icon: Icon(
                                       Icons.arrow_forward,
                                     )),
@@ -146,8 +148,10 @@ class _MyRegisterState extends State<MyRegister> {
                             children: [
                               TextButton(
                                 onPressed: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>MyLogin()
-                                  ));
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => MyLogin()));
                                 },
                                 child: Text(
                                   'Entrar',
