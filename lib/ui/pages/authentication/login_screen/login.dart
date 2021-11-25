@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/registrarse_screen/register.dart';
+import 'package:flutter_application_2/ui/pages/authentication/registrarse_screen/register.dart';
+import 'package:flutter_application_2/ui/pages/content/estados/estados.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -81,7 +82,14 @@ class _MyLoginState extends State<MyLogin> {
                                 backgroundColor: const Color(0xff4c505b),
                                 child: IconButton(
                                     color: Colors.white,
-                                    onPressed: () => {},
+                                    onPressed: () => {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const EstadosWidget(),
+                                              ))
+                                        },
                                     icon: const Icon(
                                       Icons.arrow_forward,
                                     )),
