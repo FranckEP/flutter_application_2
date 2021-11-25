@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/ui/pages/content/agregar/agregar.dart';
+import 'package:flutter_application_2/ui/pages/content/chat/chat.dart';
 
 class EstadosWidget extends StatefulWidget {
   const EstadosWidget({Key? key}) : super(key: key);
@@ -296,11 +297,20 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          const Icon(
-                            Icons.chat,
-                            color: Colors.black,
-                            size: 24,
-                          ),
+                          IconButton(
+                              onPressed: () => {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const ChatWidget(),
+                                        ))
+                                  },
+                              icon: const Icon(
+                                Icons.chat,
+                                color: Colors.black,
+                                size: 24,
+                              )),
                           Column(
                             mainAxisSize: MainAxisSize.max,
                             children: const [
