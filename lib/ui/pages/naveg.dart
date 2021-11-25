@@ -1,7 +1,6 @@
 /*
-import 'dart:html';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/ui/pages/content/estados/estados.dart';
 
 class ContentPage extends StatefulWidget {
   const ContentPage({Key? key}) : super(key: key);
@@ -9,8 +8,9 @@ class ContentPage extends StatefulWidget {
   _State createState() => _State();
 }
 class _State extends State<ContentPage> {
+
   int _selectedIndex = 0;
-  Widget _content = const StatesScreen();
+  Widget _content = const EstadosWidget();
 
   void _onItemTapped(int index){
     setState(() {
@@ -31,7 +31,6 @@ class _State extends State<ContentPage> {
       body: SafeArea(
         child: Padding(padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 16.0),
         child: AnimatedSwitcher(duration: const Duration(milliseconds: 500),
-        child: _content,
         ),
         ),
       ),
@@ -58,8 +57,8 @@ class _State extends State<ContentPage> {
             label: 'Menú',
           ),
         ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+      /*  currentIndex: _selectedIndex,
+        onTap: _onItemTapped, */
       ),
     );
   }

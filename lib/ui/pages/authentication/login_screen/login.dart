@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/ui/pages/authentication/registrarse_screen/register.dart';
 import 'package:flutter_application_2/ui/pages/content/estados/estados.dart';
+import 'package:flutter_application_2/ui/pages/naveg.dart';
 
 class MyLogin extends StatefulWidget {
   const MyLogin({Key? key}) : super(key: key);
@@ -87,7 +88,7 @@ class _MyLoginState extends State<MyLogin> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    const EstadosWidget(),
+                                                    const  EstadosWidget(),
                                               ))
                                         },
                                     icon: const Icon(

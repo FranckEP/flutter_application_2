@@ -16,49 +16,49 @@ class _AgregarWidgetState extends State<AgregarWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: const Color(0xFFF5F5F5),
-      body: SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Container(
-              width: double.infinity,
-              height: 100,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-              ),
-              child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(15, 15, 15, 20),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: const [
-                        Text(
-                          'Juan Pérez',
-                          style: TextStyle(
-                            fontFamily: 'Roboto',
-                            color: Color(0xFFFF5722),
-                            fontWeight: FontWeight.w500,
-                          ),
-                        )
-                      ],
-                    ),
-                    const Icon(
-                      Icons.person,
-                      color: Colors.blue,
-                      size: 28,
-                    )
-                  ],
-                ),
+      backgroundColor: Color(0xFFE6E6E6),
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Container(
+            width: double.infinity,
+            height: 100,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+            ),
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(15, 15, 15, 20),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'Artwork Crack ',
+                        style: TextStyle(
+                          fontFamily: 'Roboto',
+                          color: Color(0xFFFF5722),
+                          fontWeight: FontWeight.normal,
+                          fontSize: 35,
+                        ),
+                      )
+                    ],
+                  ),
+                  const Icon(
+                    Icons.search_rounded,
+                    color: Colors.black,
+                    size: 35,
+                  )
+                ],
               ),
             ),
-            Container(
+          ),
+          Container(
               width: double.infinity,
               height: 5,
               decoration: const BoxDecoration(
@@ -76,7 +76,7 @@ class _AgregarWidgetState extends State<AgregarWidget> {
                     width: 370,
                     height: 200,
                     decoration: BoxDecoration(
-                      color: const Color(0xFFEEEEEE),
+                      color: Color(0xFF68CAF0),
                       borderRadius: BorderRadius.circular(5),
                       border: Border.all(
                         color: Colors.black,
@@ -133,21 +133,111 @@ class _AgregarWidgetState extends State<AgregarWidget> {
               child: const Text('Agregar Estado',
                   style: TextStyle(color: Colors.white)),
             ),
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 100, 0, 0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Row(
+          Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(0, 367, 0, 0),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Container(
+                      width: 85,
+                      height: 70,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF3A434D),
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          IconButton(
+                              onPressed: () => {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const EstadosWidget(),
+                                        ))
+                                  },
+                              icon: const Icon(
+                                Icons.blur_circular_outlined,
+                                color: Colors.white,
+                                size: 35,
+                              )),
+                          Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: const [
+                              Text(
+                                'Estados',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+                Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Container(
+                          width: 80,
+                          height: 70,
+                          decoration: const BoxDecoration(
+                            color: Color(0xFF3A434D),
+                          ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              IconButton(
+                                onPressed: () => {/*
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Mensajes(),
+                                          ))*/
+                                    },
+                                icon: const Icon(
+                                  Icons.message_outlined,
+                                  color: Colors.white,
+                                  size: 28,
+                                )),
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                children: const [
+                                  Text(
+                                    'Mensajes',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Container(
-                        width: 100,
-                        height: 100,
+                        width: 80,
+                        height: 70,
                         decoration: const BoxDecoration(
-                          color: Color(0xFF757575),
+                          color: Color(0xFF3A434D),
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -159,19 +249,19 @@ class _AgregarWidgetState extends State<AgregarWidget> {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                const EstadosWidget(),
+                                                const AgregarWidget(),
                                           ))
                                     },
                                 icon: const Icon(
-                                  Icons.settings_outlined,
-                                  color: Colors.black,
-                                  size: 24,
+                                  Icons.add_circle_outline_outlined,
+                                  color: Colors.white,
+                                  size: 28,
                                 )),
                             Column(
                               mainAxisSize: MainAxisSize.max,
                               children: const [
                                 Text(
-                                  'Estados',
+                                  'Nuevo',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontFamily: 'Poppins',
@@ -185,77 +275,87 @@ class _AgregarWidgetState extends State<AgregarWidget> {
                       )
                     ],
                   ),
-                  Container(
-                    width: 100,
-                    height: 100,
-                    decoration: const BoxDecoration(
-                      color: Color(0xFFEEEEEE),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Container(
-                          width: 100,
-                          height: 100,
-                          decoration: const BoxDecoration(
-                            color: Color(0xFF757575),
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              const Icon(
-                                Icons.add,
-                                color: Colors.black,
-                                size: 35,
-                              ),
-                              Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: const [
-                                  Text(
-                                    'Añadir',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      color: Color(0xFF69B0D6),
-                                      fontSize: 16,
-                                    ),
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Container(
-                        width: 100,
-                        height: 100,
+                        width: 80,
+                        height: 70,
                         decoration: const BoxDecoration(
-                          color: Color(0xFF757575),
+                          color: Color(0xFF3A434D),
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            const Icon(
-                              Icons.chat,
-                              color: Colors.black,
-                              size: 24,
-                            ),
+                            IconButton(
+                                onPressed: () => {/*
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Mensajes(),
+                                          ))*/
+                                    },
+                                icon: const Icon(
+                                  Icons.photo_camera_back_outlined,
+                                  color: Colors.white,
+                                  size: 28,
+                                )),
                             Column(
                               mainAxisSize: MainAxisSize.max,
                               children: const [
                                 Text(
-                                  'Mensajes',
+                                  'Arte Social',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    color: Colors.cyanAccent,
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Container(
+                        width: 85,
+                        height: 70,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF3A434D),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            IconButton(
+                                onPressed: () => {/*
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Mensajes(),
+                                          ))*/
+                                    },
+                                icon: const Icon(
+                                  Icons.menu,
+                                  color: Colors.white,
+                                  size: 28,
+                                )),
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: const [
+                                Text(
+                                  'Menú',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
                                   ),
                                 )
                               ],
@@ -265,11 +365,10 @@ class _AgregarWidgetState extends State<AgregarWidget> {
                       )
                     ],
                   )
-                ],
-              ),
-            )
-          ],
-        ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

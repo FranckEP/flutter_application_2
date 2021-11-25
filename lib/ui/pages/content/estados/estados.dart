@@ -42,7 +42,8 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                         style: TextStyle(
                           fontFamily: 'Roboto',
                           color: Color(0xFFFF5722),
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 35,
                         ),
                       )
                     ],
@@ -50,7 +51,7 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                   const Icon(
                     Icons.search_rounded,
                     color: Colors.black,
-                    size: 24,
+                    size: 35,
                   )
                 ],
               ),
@@ -69,8 +70,8 @@ class _EstadosWidgetState extends State<EstadosWidget> {
               width: 370,
               height: 100,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(5),
+                color: Color(0xFF68CAF0),
+                borderRadius: BorderRadius.circular(10),
                 border: Border.all(
                   color: Colors.black,
                 ),
@@ -89,7 +90,7 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                             'Juan Perez',
                             style: TextStyle(
                               fontFamily: 'Roboto',
-                              color: Color(0xFFFF5722),
+                              color: Color(0xFF3A434D),
                               fontWeight: FontWeight.w500,
                             ),
                           )
@@ -126,8 +127,8 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                   width: 370,
                   height: 100,
                   decoration: BoxDecoration(
-                    color: const Color(0xFFEEEEEE),
-                    borderRadius: BorderRadius.circular(5),
+                    color: Color(0xFFF4AC47),
+                    borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                       color: Colors.black,
                     ),
@@ -148,7 +149,7 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                                   'Juan Perez',
                                   style: TextStyle(
                                     fontFamily: 'Roboto',
-                                    color: Color(0xFFFF5722),
+                                    color: Color(0xFF3A434D),
                                     fontWeight: FontWeight.w500,
                                   ),
                                 )
@@ -179,7 +180,7 @@ class _EstadosWidgetState extends State<EstadosWidget> {
             ],
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0, 100, 0, 0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0, 385, 0, 0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -189,10 +190,10 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Container(
-                      width: 100,
-                      height: 100,
+                      width: 85,
+                      height: 70,
                       decoration: const BoxDecoration(
-                        color: Color(0xFF757575),
+                        color: Color(0xFF3A434D),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -208,8 +209,8 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                                         ))
                                   },
                               icon: const Icon(
-                                Icons.settings_outlined,
-                                color: Colors.black,
+                                Icons.blur_circular_outlined,
+                                color: Colors.white,
                                 size: 35,
                               )),
                           Column(
@@ -230,20 +231,59 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                     )
                   ],
                 ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFEEEEEE),
-                  ),
-                  child: Row(
+                Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Container(
+                          width: 80,
+                          height: 70,
+                          decoration: const BoxDecoration(
+                            color: Color(0xFF3A434D),
+                          ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              IconButton(
+                                onPressed: () => {/*
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Mensajes(),
+                                          ))*/
+                                    },
+                                icon: const Icon(
+                                  Icons.message_outlined,
+                                  color: Colors.white,
+                                  size: 28,
+                                )),
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                children: const [
+                                  Text(
+                                    'Mensajes',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Container(
-                        width: 100,
-                        height: 100,
+                        width: 80,
+                        height: 70,
                         decoration: const BoxDecoration(
-                          color: Color(0xFF757575),
+                          color: Color(0xFF3A434D),
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -259,20 +299,19 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                                           ))
                                     },
                                 icon: const Icon(
-                                  Icons.add,
-                                  color: Colors.black,
-                                  size: 24,
+                                  Icons.add_circle_outline_outlined,
+                                  color: Colors.white,
+                                  size: 28,
                                 )),
                             Column(
                               mainAxisSize: MainAxisSize.max,
                               children: const [
                                 Text(
-                                  'Añadir',
+                                  'Nuevo',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    color: Color(0xFF69B0D6),
-                                    fontSize: 16,
+                                    color: Colors.white,
                                   ),
                                 )
                               ],
@@ -282,43 +321,96 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                       )
                     ],
                   ),
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      width: 100,
-                      height: 100,
-                      decoration: const BoxDecoration(
-                        color: Color(0xFF757575),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          const Icon(
-                            Icons.chat,
-                            color: Colors.black,
-                            size: 24,
-                          ),
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: const [
-                              Text(
-                                'Mensajes',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  color: Colors.cyanAccent,
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    )
-                  ],
-                )
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Container(
+                        width: 80,
+                        height: 70,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF3A434D),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            IconButton(
+                                onPressed: () => {/*
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Mensajes(),
+                                          ))*/
+                                    },
+                                icon: const Icon(
+                                  Icons.photo_camera_back_outlined,
+                                  color: Colors.white,
+                                  size: 28,
+                                )),
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: const [
+                                Text(
+                                  'Arte Social',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Container(
+                        width: 85,
+                        height: 70,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF3A434D),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            IconButton(
+                                onPressed: () => {/*
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const Mensajes(),
+                                          ))*/
+                                    },
+                                icon: const Icon(
+                                  Icons.menu,
+                                  color: Colors.white,
+                                  size: 28,
+                                )),
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: const [
+                                Text(
+                                  'Menú',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                  ),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  )
               ],
             ),
           )
