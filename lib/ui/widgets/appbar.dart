@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 class CustomAppBar extends AppBar{
   final Widget tile;
@@ -15,6 +15,7 @@ class CustomAppBar extends AppBar{
   }) : super(
     key: key,
     centerTitle: true,
-    title: TextAlign.left
+    //title: TextAlign.left
   )
 }
+*/
