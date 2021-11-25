@@ -179,7 +179,7 @@ class _EstadosWidgetState extends State<EstadosWidget> {
             ],
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0, 200, 0, 0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0, 100, 0, 0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -198,11 +198,20 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          const Icon(
-                            Icons.settings_outlined,
-                            color: Colors.black,
-                            size: 35,
-                          ),
+                          IconButton(
+                              onPressed: () => {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) =>
+                                              const EstadosWidget(),
+                                        ))
+                                  },
+                              icon: const Icon(
+                                Icons.settings_outlined,
+                                color: Colors.black,
+                                size: 35,
+                              )),
                           Column(
                             mainAxisSize: MainAxisSize.max,
                             children: const [
@@ -211,7 +220,7 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  color: Colors.cyanAccent,
+                                  color: Colors.white,
                                 ),
                               )
                             ],
@@ -262,7 +271,8 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontFamily: 'Poppins',
-                                    color: Colors.white,
+                                    color: Color(0xFF69B0D6),
+                                    fontSize: 16,
                                   ),
                                 )
                               ],
@@ -299,7 +309,7 @@ class _EstadosWidgetState extends State<EstadosWidget> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
-                                  color: Colors.white,
+                                  color: Colors.cyanAccent,
                                 ),
                               )
                             ],
